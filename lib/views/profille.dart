@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sante/views/signUp.dart';
-
+import 'package:sante/homePage.dart';
 class profile extends StatefulWidget {
   const profile({Key? key}) : super(key: key);
 
@@ -51,7 +51,10 @@ class _profileState extends State<profile> {
                   primary: Color.fromARGB(255, 136, 198, 138), // background
                   onPrimary: Colors.black, // foreground
                 ),
-                onPressed: () {},
+                onPressed: (() {
+                    Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(builder: (_) => (const MyHomePage(title: 'hauOOra'))));
+                  }),
                 child: Text('Log in'),
               ),
               SizedBox(height: 115.0),

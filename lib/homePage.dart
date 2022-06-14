@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sante/views/carte.dart';
 import 'package:sante/views/home.dart';
 import 'package:sante/views/informations.dart';
-import 'package:sante/views/profille.dart';
+import 'package:sante/views/footer.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -15,7 +15,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int currentIndex = 0;
-  final screens = [home(), carte(), info(), profile()];
+  final screens = [home(), carte(), info(), FooterPage()];
 
   @override
   Widget build(BuildContext context) {
