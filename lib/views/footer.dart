@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:footer/footer.dart';
 import 'package:footer/footer_view.dart';
 
+import '../conponents/NavigationDrawer.dart';
+
 class FooterPage extends StatefulWidget {
   @override
   FooterPageState createState() {
@@ -14,12 +16,11 @@ class FooterPageState extends State<FooterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: new Text(
-          'ratedApp',
-          style: TextStyle(fontWeight: FontWeight.w200),
-        ),
+        title: Text("More", style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.green,
+        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.settings))],
       ),
-      drawer: new Drawer(),
+      drawer: NavigationDrawerWidget(),
       body: FooterView(
           children: <Widget>[
             new Column(

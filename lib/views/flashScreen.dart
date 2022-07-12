@@ -1,7 +1,7 @@
 import 'dart:async';
+import 'package:sante/homePage.dart';
 import 'package:sante/views/profille.dart';
 import 'package:flutter/material.dart';
-
 
 class flashScreen extends StatefulWidget {
   const flashScreen({Key? key}) : super(key: key);
@@ -14,8 +14,10 @@ class _flashScreenState extends State<flashScreen> {
   void initState() {
     super.initState();
     Timer(Duration(seconds: 5), (() {
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (_) => profile()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(
+          builder: (_) => const MyHomePage(
+                title: 'hauOOra',
+              )));
     }));
   }
 

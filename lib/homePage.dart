@@ -15,7 +15,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int currentIndex = 0;
-  final screens = [home(), carte(), info(), FooterPage()];
+  final screens = [home(), HomeScreen(), info(), FooterPage()];
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,8 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: false,
         iconSize: 35,
-        selectedItemColor: Colors.green,
+        unselectedItemColor: Colors.green,
+        selectedItemColor: Colors.purple,
         type: BottomNavigationBarType.fixed,
         currentIndex: currentIndex,
         onTap: (index) => setState(() => currentIndex = index),
@@ -42,11 +43,11 @@ class _MyHomePageState extends State<MyHomePage> {
               backgroundColor: Colors.blue),
           BottomNavigationBarItem(
               icon: Icon(Icons.info),
-              label: 'info',
+              label: 'infos',
               backgroundColor: Colors.blue),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: 'profile',
+              icon: Icon(Icons.menu_rounded),
+              label: 'more',
               backgroundColor: Colors.amber),
         ],
       ),

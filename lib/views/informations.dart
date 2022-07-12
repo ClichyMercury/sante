@@ -1,25 +1,46 @@
 import 'package:flutter/material.dart';
 
-class info extends StatefulWidget {
-  const info({Key? key}) : super(key: key);
+import '../api/api_services.dart';
+import '../conponents/NavigationDrawer.dart';
+import '../conponents/custumListTile.dart';
+import '../models/artitcle_models.dart';
 
+class info extends StatefulWidget {
   @override
-  State<info> createState() => _infoState();
+  _infoState createState() => _infoState();
 }
 
 class _infoState extends State<info> {
+  ApiService client = ApiService();
+
   @override
-  Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-            title: Text("informations"),
-            centerTitle: false,
-            backgroundColor: Colors.green,
-            actions: []),
-        body: Center(
-          child: Text(
-            'info',
-            style: TextStyle(fontSize: 60),
-          ),
-        ),
-      );
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("News", style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.green,
+      ),
+      drawer: NavigationDrawerWidget(),
+      //Now let's call the APi services with futurebuilder wiget
+      body: FutureBuilder(
+        future: client.getArticle(),
+        builder: (BuildContext context, AsyncSnapshot<List<Article>> snapshot) {
+          //let's check if we got a response or not
+          if (snapshot.hasData) {
+            //Now let's make a list of articles
+            List<Article>? articles = snapshot.data;
+            return ListView.builder(
+              //Now let's create our custom List tile
+              itemCount: articles!.length,
+              itemBuilder: (context, index) =>
+                  customListTile(articles[index], context),
+            );
+          }
+          return Center(
+            child: CircularProgressIndicator(),
+          );
+        },
+      ),
+    );
+  }
 }
