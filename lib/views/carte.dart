@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
       home: Scaffold(
         appBar: AppBar(
           title: Text("Santé", style: TextStyle(color: Colors.white)),
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.purple,
           actions: [
             IconButton(
               onPressed: () {},
@@ -82,6 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         )),
         floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.purple,
           child: Icon(Icons.copyright),
           onPressed: () async {
             http.Response response = await getCopyrightsJSONResponse();

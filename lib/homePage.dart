@@ -25,9 +25,9 @@ class _MyHomePageState extends State<MyHomePage> {
         children: screens,
       ),
       bottomNavigationBar: BottomNavigationBar(
-        showUnselectedLabels: false,
+        showUnselectedLabels: true,
         iconSize: 35,
-        unselectedItemColor: Colors.green,
+        unselectedItemColor: Colors.blue.shade600,
         selectedItemColor: Colors.purple,
         type: BottomNavigationBarType.fixed,
         currentIndex: currentIndex,

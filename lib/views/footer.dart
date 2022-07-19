@@ -17,7 +17,7 @@ class FooterPageState extends State<FooterPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("More", style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.purple,
         actions: [IconButton(onPressed: () {}, icon: Icon(Icons.settings))],
       ),
       drawer: NavigationDrawerWidget(),

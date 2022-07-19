@@ -15,7 +15,7 @@ class _homeState extends State<home> {
         appBar: AppBar(
             title: Text("hauOOra"),
             centerTitle: false,
-            backgroundColor: Colors.green,
+            backgroundColor: Colors.purple,
             actions: [
               IconButton(
                   onPressed: (() {

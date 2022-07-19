@@ -18,7 +18,7 @@ class _infoState extends State<info> {
     return Scaffold(
       appBar: AppBar(
         title: Text("News", style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.purple,
       ),
       drawer: NavigationDrawerWidget(),
       //Now let's call the APi services with futurebuilder wiget
