@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:sante/views/agenda.dart';
+import 'package:sante/views/chefferie.dart';
+import 'package:sante/views/projetsociaux.dart';
+import 'package:sante/views/utiles.dart';
+
+import '../views/help.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 20);
@@ -6,7 +12,7 @@ class NavigationDrawerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Material(
-        color: Colors.purple,
+        color: Colors.green,
         child: ListView(
           children: <Widget>[
             Container(
@@ -17,41 +23,35 @@ class NavigationDrawerWidget extends StatelessWidget {
                   buildSearchField(),
                   const SizedBox(height: 24),
                   buildMenuItem(
-                    text: 'Others Informations',
-                    icon: Icons.info,
+                    text: 'Bonnes affaires',
+                    icon: Icons.balance,
                     onClicked: () => selectedItem(context, 0),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'Weather Maps',
-                    icon: Icons.location_on_outlined,
+                    text: 'Chefferie',
+                    icon: Icons.star_border_purple500,
                     onClicked: () => selectedItem(context, 1),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'Workflow',
+                    text: 'Projet Sociaux',
                     icon: Icons.workspaces_outline,
                     onClicked: () => selectedItem(context, 2),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'Updates',
-                    icon: Icons.update,
+                    text: 'Agenda',
+                    icon: Icons.view_agenda_outlined,
                     onClicked: () => selectedItem(context, 3),
                   ),
                   const SizedBox(height: 24),
                   Divider(color: Colors.white70),
                   const SizedBox(height: 24),
                   buildMenuItem(
-                    text: 'Plugins',
-                    icon: Icons.account_tree_outlined,
+                    text: 'aides',
+                    icon: Icons.help,
                     onClicked: () => selectedItem(context, 4),
-                  ),
-                  const SizedBox(height: 16),
-                  buildMenuItem(
-                    text: 'Notifications',
-                    icon: Icons.notifications_outlined,
-                    onClicked: () => selectedItem(context, 5),
                   ),
                 ],
               ),
@@ -145,16 +145,31 @@ class NavigationDrawerWidget extends StatelessWidget {
     Navigator.of(context).pop();
 
     switch (index) {
-      /* case 0:
+      case 0:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => News(),
+          builder: (context) => utiles(),
         ));
         break;
       case 1:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => road_state(),
+          builder: (context) => chefferie(),
         ));
-        break; */
+        break;
+      case 2:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => projetSociaux(),
+        ));
+        break;
+      case 3:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => agenda(),
+        ));
+        break;
+      case 4:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => FooterPage(),
+        ));
+        break;
     }
   }
 }

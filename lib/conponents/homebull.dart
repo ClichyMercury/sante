@@ -19,7 +19,7 @@ GestureDetector Homebull(
     context}) {
   return GestureDetector(
     onTap: () {
-      Navigator.of(context!).pushReplacement(
+      Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (_) => lien!,
         ),

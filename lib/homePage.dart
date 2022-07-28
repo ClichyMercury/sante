@@ -15,7 +15,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int currentIndex = 0;
-  final screens = [home(), HomeScreen(), info(), FooterPage()];
+  final screens = [home(), HomeScreen(), info(), submit()];
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: true,
         iconSize: 35,
-        unselectedItemColor: Colors.blue.shade600,
+        unselectedItemColor: Colors.green,
         selectedItemColor: Colors.purple,
         type: BottomNavigationBarType.fixed,
         currentIndex: currentIndex,

@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:flutter_map/flutter_map.dart";
 import "package:latlong2/latlong.dart";
 import "package:http/http.dart" as http;
+import 'package:sante/views/garde_pharm.dart';
 import "dart:convert" as convert;
 
 import '../conponents/NavigationDrawer.dart';
@@ -23,23 +24,33 @@ class _HomeScreenState extends State<HomeScreen> {
       title: "hauOOra",
       home: Scaffold(
         appBar: AppBar(
+          elevation: 0,
           title: Text("Santé", style: TextStyle(color: Colors.white)),
-          backgroundColor: Colors.purple,
+          backgroundColor: Colors.green,
+          centerTitle: false,
           actions: [
             IconButton(
               onPressed: () {},
               icon: Icon(
                 Icons.health_and_safety,
+                color: Colors.purple,
               ),
             ),
             IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.medical_information),
+              onPressed: (() {
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (_) => (gardePharm())));
+              }),
+              icon: Icon(
+                Icons.medical_information,
+                color: Colors.purple,
+              ),
             ),
             IconButton(
               onPressed: () {},
               icon: Icon(
                 Icons.medical_services_rounded,
+                color: Colors.purple,
               ),
             ),
           ],

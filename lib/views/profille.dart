@@ -16,7 +16,12 @@ class _profileState extends State<profile> {
             title: Text("Profile"),
             centerTitle: false,
             backgroundColor: Colors.green,
-            actions: []),
+            actions: [
+              IconButton(onPressed: (() {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (_) => (const MyHomePage(title: 'hauOOra'))));
+                  }), icon: Icon(Icons.arrow_back_ios))
+            ]),
         body: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.symmetric(

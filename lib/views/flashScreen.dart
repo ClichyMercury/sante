@@ -24,7 +24,7 @@ class _flashScreenState extends State<flashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue.shade600,
+      backgroundColor: Colors.green,
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -39,7 +39,7 @@ class _flashScreenState extends State<flashScreen> {
             height: 55,
           ),
           CircularProgressIndicator(
-            color: Colors.amber,
+            color: Colors.purple,
           )
         ],
       )),

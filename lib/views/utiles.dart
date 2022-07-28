@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:sante/homePage.dart';
 
-import '../homePage.dart';
-
-class gardePharm extends StatefulWidget {
-  const gardePharm({Key? key}) : super(key: key);
+class utiles extends StatefulWidget {
+  const utiles({Key? key}) : super(key: key);
 
   @override
-  State<gardePharm> createState() => _gardePharmState();
+  State<utiles> createState() => _utilesState();
 }
 
-class _gardePharmState extends State<gardePharm> {
+class _utilesState extends State<utiles> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,13 +22,12 @@ class _gardePharmState extends State<gardePharm> {
             }),
             icon: Icon(Icons.arrow_back_ios)),
         elevation: 0,
-        title:
-            Text("Pharmacie de garde", style: TextStyle(color: Colors.white)),
+        title: Text("bonnes affaires", style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.purple,
       ),
       body: Center(
         child: Text(
-          'Pharmacie de garde',
+          'recherche des personnes utiles et des biens',
           style: TextStyle(fontSize: 40),
         ),
       ),

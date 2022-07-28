@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../homePage.dart';
 
-class gardePharm extends StatefulWidget {
-  const gardePharm({Key? key}) : super(key: key);
+class projetSociaux extends StatefulWidget {
+  const projetSociaux({Key? key}) : super(key: key);
 
   @override
-  State<gardePharm> createState() => _gardePharmState();
+  State<projetSociaux> createState() => _projetSociauxState();
 }
 
-class _gardePharmState extends State<gardePharm> {
+class _projetSociauxState extends State<projetSociaux> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,13 +23,12 @@ class _gardePharmState extends State<gardePharm> {
             }),
             icon: Icon(Icons.arrow_back_ios)),
         elevation: 0,
-        title:
-            Text("Pharmacie de garde", style: TextStyle(color: Colors.white)),
+        title: Text("Projet Sociaux", style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.purple,
       ),
       body: Center(
         child: Text(
-          'Pharmacie de garde',
+          'Projet Sociaux',
           style: TextStyle(fontSize: 40),
         ),
       ),
