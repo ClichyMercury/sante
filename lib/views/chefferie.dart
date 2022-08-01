@@ -15,13 +15,11 @@ class _chefferieState extends State<chefferie> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-            onPressed: (() {
-              Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (_) => (MyHomePage(
-                        title: 'AllaKro',
-                      ))));
-            }),
-            icon: Icon(Icons.arrow_back_ios)),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(Icons.arrow_back_ios),
+        ),
         elevation: 0,
         title: Text("chefferie", style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.purple,

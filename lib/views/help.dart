@@ -17,14 +17,12 @@ class FooterPageState extends State<FooterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-                leading: IconButton(
-            onPressed: (() {
-              Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (_) => (MyHomePage(
-                        title: 'AllaKro',
-                      ))));
-            }),
-            icon: Icon(Icons.arrow_back_ios)),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(Icons.arrow_back_ios),
+        ),
         title: Text("More", style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.green,
         actions: [IconButton(onPressed: () {}, icon: Icon(Icons.settings))],

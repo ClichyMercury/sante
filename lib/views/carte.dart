@@ -70,13 +70,31 @@ class _HomeScreenState extends State<HomeScreen> {
                 new MarkerLayerOptions(
                   markers: [
                     new Marker(
-                      width: 80.0,
-                      height: 80.0,
-                      point: new LatLng(5.3599517, -4.0082563),
+                      width: 40.0,
+                      height: 40.0,
+                      point: new LatLng(5.3474093, -3.9978172),
                       builder: (BuildContext context) => const Icon(
-                          Icons.location_on,
-                          size: 60.0,
-                          color: Colors.black),
+                          Icons.medical_information,
+                          size: 40.0,
+                          color: Colors.orange),
+                    ),
+                    new Marker(
+                      width: 40.0,
+                      height: 40.0,
+                      point: new LatLng(5.346051, -3.9958193),
+                      builder: (BuildContext context) => const Icon(
+                          Icons.medical_information,
+                          size: 40.0,
+                          color: Colors.orange),
+                    ),
+                    new Marker(
+                      width: 40.0,
+                      height: 40.0,
+                      point: new LatLng(5.348892, 3.9983901),
+                      builder: (BuildContext context) => const Icon(
+                          Icons.medical_information,
+                          size: 40.0,
+                          color: Colors.orange),
                     ),
                   ],
                 ),
